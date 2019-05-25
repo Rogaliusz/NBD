@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67sr6TgaHUOIMpkTGPlWHpwZ4rfFkA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:35:49 GMT
+ETag: "GaXkQFf9ycV1wn4wFelhS"
+Date: Wed, 06 Apr 2019 20:37:48 GMT
+Content-Type: application/json
+Content-Length: 105
+
+{ "marka": "lexus", "model": "is", "rokProdukcji": 2005, "rodzajNadwozia": ["kombi", "sedan", "kabrio"] }

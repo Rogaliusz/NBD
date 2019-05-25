@@ -1,0 +1,14 @@
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs47O2sOA0OpcQZTIlMeK8PjQz1X+LIA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:41:07 GMT
+ETag: "1jUYgdbzt7gCqRXUdJQFtf"
+Date: Wed, 06 Apr 2019 20:41:07 GMT
+Content-Type: application/json
+Content-Length: 120
+
+{ "marka": "opel", "model": "astra", "rokProdukcji": 2006, "rodzajNadwozia": ["kombi", "sedan", "hatchback", "kabrio"] }

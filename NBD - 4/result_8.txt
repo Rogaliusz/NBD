@@ -1,0 +1,15 @@
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 201 Created
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67u4aDgaHUMIMpkTGPlUHqeM8VviwA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Location: /buckets/S13054/keys/AdTFIPRBmso9j1hbUTdnCT5RTj8
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:59:06 GMT
+ETag: "6wiFyDJRJujY6MJYRtEzIO"
+Date: Wed, 06 Apr 2019 20:59:06 GMT
+Content-Type: application/json
+Content-Length: 101
+
+{ "marka": "bmw", "model": "3", "rokProdukcji": 2003, "rodzajNadwozia": ["kombi", "sedan", "coupe"] }

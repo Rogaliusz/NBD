@@ -1,0 +1,105 @@
+
+1. Wszystkie filmy, w których grał Hugo Weaving.
+MATCH (person:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(movies) RETURN person,movies
+
+2. Reżyserzy filmów, w których grał Hugo Weaving
+MATCH (person:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(movies)<-[:DIRECTED]-(directors) RETURN directors
+
+3. Wszystkie osoby, z którymi Hugo Weaving grał w tych samych filmach
+MATCH (person:Person {name:"Hugo Weaving"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors) RETURN coActors
+
+4. Listę aktorów (aktor = osoba, która grała przynajmniej w jednym filmie) wraz z ilością filmów,
+w których grali
+MATCH (person:Person)-[:ACTED_IN]->(ActorsMovies) RETURN person.name, count(*) as MoviesCount
+
+5. Listę osób, które napisały scenariusz filmu, które wyreżyserowały wraz z tytułami takich
+filmów (koniunkcja – ten sam autor scenariusza i reżyser)
+MATCH (person:Person)-[:DIRECTED]->(directed)<-[:WROTE]-(wrote) WHERE wrote=person RETURN person, directed
+
+6. Listę filmów, w których grał zarówno Hugo Weaving jak i Keanu Reeves
+MATCH (keanuReeves:Person {name:"Keanu Reeves"})-[:ACTED_IN]->(actedIn)<-[:ACTED_IN]-(hugoWeaving:Person {name:"Hugo Weaving"}) RETURN actedIn.title
+
+7. Zestaw zapytań powodujących uzupełnienie bazy danych o film Captain America: The First
+Avenger wraz z uzupełnieniem informacji o reżyserze, scenarzystach i odtwórcach głównych ról (w oparciu o skrócone informacje z IMDB - http://www.imdb.com/title/tt0458339/) 
++ zapytanie pokazujące dodany do bazy film wraz odtwórcami głównych ról, scenarzystą i reżyserem. Plik SVG ma pokazywać wynik ostatniego zapytania.
+
+CREATE (CapitanAmericaTheFirstAvenger:Movie {title:'Capitan America:The First Avenger', tagline:'I know this neighborhood. I got beat up in that alley. And that parking lot. And behind that diner.', released:2011})
+CREATE (chrisEvans:Person {name:'Chris Evans', born:1981})
+CREATE (samuelLJackson:Person {name:'Samuel L. Jackson', born:1948})
+CREATE (jJohnston:Person {name:'Joe Johnston', born:1950})
+CREATE (markusChristopher:Person {name:'Christopher Markus', born:1965})
+CREATE (mcFeelyStephen:Person {name:'Stephen McFeely', born:1952})
+CREATE
+  (chrisEvans)-[:ACTED_IN {roles:['Capitan America / Steve Rogers']}]->(CapitanAmericaTheFirstAvenger),
+  (samuelLJackson)-[:ACTED_IN {roles:['Nick Fury']}]->(CapitanAmericaTheFirstAvenger),
+  (hugoWeaving:Person {name: 'Hugo Weaving'})-[:ACTED_IN {roles:['Red Skull']}]->(CapitanAmerica),
+  (jJohnston)-[:DIRECTED]->(CapitanAmericaTheFirstAvenger),
+  (markusChristopher)-[:WROTE]->(CapitanAmericaTheFirstAvenger),
+  (mcFeelyStephen)-[:WROTE]->(CapitanAmericaTheFirstAvenger)
+
+MATCH (people:Person)-[related]-(movie:Movie {title: "Capitan America:The First Avenger"}) RETURN people,movie, Type(related), related
+
+Część 2 – Wycieczki górskie
+
+8. Znajdź wszystkie trasy którymi można dostać się z Darjeeling na Sandakphu
+MATCH (startTown:town {name:"Darjeeling"})-[*1..15]-(Sandakphu)
+ RETURN DISTINCT Sandakphu
+
+9. Znajdź trasy którymi można dostać się z Darjeeling na Sandakphu, mające najmniejszą ilość etapów.
+MATCH shortest = shortestPath((start:town{name: "Darjeeling"})-[*]-(meta:peak { name:"Sandakphu" }))
+RETURN shortest, length(shortest)
+
+10. Znajdź mające najmniej etapów trasy którymi można dostać się z Darjeeling na Sandakphu i które mogą być wykorzystywane zimą
+MATCH shortest = shortestPath ((start:town{name: "Darjeeling"})-[*]-(meta:peak { name:"Sandakphu" })) 
+WHERE ALL(shortest in rels(shortest) WHERE shortest.winter = "true")
+RETURN shortest
+
+11. Uszereguj trasy którymi można dostać się z Darjeeling na Sandakphu według dystansu
+MATCH finalPath = ((start:town{name: "Darjeeling"})-[*1..6]-(meta:peak { name:"Sandakphu" }))
+RETURN finalPath, reduce(addDistance=0, path IN relationships(finalPath)|addDistance + path.distance) AS finalDistance ORDER BY finalDistance ASC
+
+12. Znajdź wszystkie trasy dostępne latem, którymi można poruszać się przy pomocy roweru
+(twowheeler) z Darjeeling 
+MATCH (start:town{name: "Darjeeling"})-[path:twowheeler]->(locations) where path.summer="True" RETURN path
+
+13. Znajdź wszystkie miejsca do których można dotrzeć przy pomocy roweru (twowheeler) z
+Darjeeling latem
+MATCH (start:town{name: "Darjeeling"})-[path:twowheeler]->(locations) where path.summer="True" RETURN locations
+
+Część 3 – Połączenia lotnicze
+
+14. Uszereguj porty lotnicze według ilości rozpoczynających się w nich lotów
+TWORZENIE RELATIONSHIP.
+MATCH (airportStrt:Airport)<-[:ORIGIN]-(flight:Flight)-[:DESTINATION]->(airportStp:Airport), (flight)<-[:ASSIGN]-(ticket:Ticket)
+WITH airportStrt, airportStp, flight, min(ticket.price) as minimumPriceTicket
+MATCH (flight)<-[:ASSIGN]-(t:Ticket {price: minimumPriceTicket})
+WITH airportStrt, airportStp, flight, t
+CREATE (airportStrt)-[cheapestFlight:CHEAPEST_FLIGHT {price: t.price, class:t.class, date: flight.date, duration: flight.duration, distance: flight.distance, airline:flight.airline}]->(airportStp)
+RETURN cheapestFlight;
+ZAPYTANIE:
+MATCH path = ()-[origin:ORIGIN]->(airport:Airport) RETURN airport, COUNT(origin) AS numberOfFlights ORDER BY numberOfFlights ASC
+
+15. Znajdź wszystkie porty lotnicze, do których da się dolecieć (bezpośrednio lub z przesiadkami)
+z Los Angeles (LAX) wydając mniej niż 3000
+MATCH airport=(airportStp:Airport)<-[cheapestFlight:CHEAPEST_FLIGHT*1..6]-(airportStrt:Airport {name: "LAX"}), ()-[origin:ORIGIN]->(airportStrt:Airport ) WITH airport,airportStp, reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price) as cost WHERE cost < 3000  return distinct airportStp
+
+16. Uszereguj połączenia, którymi można dotrzeć z Los Angeles (LAX) do Dayton (DAY) według ceny biletów
+MATCH airport = (airportStp:Airport{name: "DAY"})<-[cheapestFlight:CHEAPEST_FLIGHT*1..10]-(airportStp:Airport {name: "LAX"}), (airportStp:Airport)<-[:DESTINATION]-(), ()-[:ORIGIN]->(airportStp:Airport) return airport,reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price)  as cost ORDER BY cost DESC
+
+17. Znajdź najtańsze połączenie z Los Angeles (LAX) do Dayton (DAY)
+MATCH airport = (airportStp:Airport{name: "DAY"})<-[cheapestFlight:CHEAPEST_FLIGHT*1..10]-(airportStrt:Airport {name: "LAX"}), (airportStp:Airport)<-[:DESTINATION]-(), ()-[:ORIGIN]->(airportStrt:Airport ) WITH airport, cheapestFlight, reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price) as cost RETURN airport, cost ORDER BY cost LIMIT 1
+
+18. Znajdź najtańsze połączenie z Los Angeles (LAX) do Dayton (DAY) w klasie biznes
+TWORZENIE RELATIONSHIP.
+MATCH (airportStop:Airport)<-[:ORIGIN]-(flight:Flight)-[:DESTINATION]->(airportStart:Airport), (flight)<-[:ASSIGN]-(ticket:Ticket)
+WITH airportStp, airportStrt, flight, ticket  WHERE ticket.class = "business"
+CREATE (airportStop)-[businessFlight:BUSINESS_FLIGHT {price: ticket.price, class:ticket.class, date: flight.date, duration: flight.duration, distance: flight.distance, airline:flight.airline}]->(airportStrt)
+RETURN businessFlight;
+ZAPYTANIE:
+MATCH airport=(airportStp:Airport{name: "DAY"})<-[businessFlight:BUSINESS_FLIGHT*1..10]-(airportStrt:Airport {name: "LAX"}), (airportStp:Airport)<-[:DESTINATION]-(), ()-[:ORIGIN]->(airportStrt:Airport) WITH airport,  reduce(totalDis=0, rel IN relationships(airport)|totalDis + rel.price) as cost RETURN airport, cost ORDER BY cost LIMIT 1
+
+19. Uszereguj linie lotnicze według ilości miast, pomiędzy którymi oferują połączenia (unikalnych miast biorących udział w relacjach :ORIGIN i :DESTINATION węzłów typu Flight obsługiwanych przez daną linię)
+MATCH airport=(airportStp:Airport)<-[cheapestFlight:CHEAPEST_FLIGHT]-(airportStrt:Airport) WITH cheapestFlight, airportStp.name + airportStrt.name as special RETURN  cheapestFlight.airline as flight,  count(DISTINCT special) AS number ORDER BY number DESC
+
+20. Znajdź najtańszą trasę łączącą 3 różne porty lotnicze
+MATCH airport=(airportStp:Airport)<-[:CHEAPEST_FLIGHT]-(airportStrt:Airport)<-[:CHEAPEST_FLIGHT]-(airportThird:Airport)  WITH airport, reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price) as cost WHERE airportStp<>airportThird  RETURN airport, cost ORDER BY cost LIMIT 1

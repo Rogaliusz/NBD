@@ -1,0 +1,1567 @@
+/* 1 */
+{
+    "_id" : "Account Coordinator",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 2 */
+{
+    "_id" : "Account Executive",
+    "value" : {
+        "iloscPracownikow" : 74.0
+    }
+}
+
+/* 3 */
+{
+    "_id" : "Account Representative I",
+    "value" : {
+        "iloscPracownikow" : 27.0
+    }
+}
+
+/* 4 */
+{
+    "_id" : "Account Representative II",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 5 */
+{
+    "_id" : "Account Representative III",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 6 */
+{
+    "_id" : "Account Representative IV",
+    "value" : {
+        "iloscPracownikow" : 28.0
+    }
+}
+
+/* 7 */
+{
+    "_id" : "Accountant I",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 8 */
+{
+    "_id" : "Accountant II",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 9 */
+{
+    "_id" : "Accountant III",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 10 */
+{
+    "_id" : "Accountant IV",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 11 */
+{
+    "_id" : "Accounting Assistant I",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 12 */
+{
+    "_id" : "Accounting Assistant II",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 13 */
+{
+    "_id" : "Accounting Assistant III",
+    "value" : {
+        "iloscPracownikow" : 15.0
+    }
+}
+
+/* 14 */
+{
+    "_id" : "Accounting Assistant IV",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 15 */
+{
+    "_id" : "Actuary",
+    "value" : {
+        "iloscPracownikow" : 89.0
+    }
+}
+
+/* 16 */
+{
+    "_id" : "Administrative Assistant I",
+    "value" : {
+        "iloscPracownikow" : 14.0
+    }
+}
+
+/* 17 */
+{
+    "_id" : "Administrative Assistant II",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 18 */
+{
+    "_id" : "Administrative Assistant III",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 19 */
+{
+    "_id" : "Administrative Assistant IV",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 20 */
+{
+    "_id" : "Administrative Officer",
+    "value" : {
+        "iloscPracownikow" : 90.0
+    }
+}
+
+/* 21 */
+{
+    "_id" : "Analog Circuit Design manager",
+    "value" : {
+        "iloscPracownikow" : 79.0
+    }
+}
+
+/* 22 */
+{
+    "_id" : "Analyst Programmer",
+    "value" : {
+        "iloscPracownikow" : 88.0
+    }
+}
+
+/* 23 */
+{
+    "_id" : "Assistant Manager",
+    "value" : {
+        "iloscPracownikow" : 76.0
+    }
+}
+
+/* 24 */
+{
+    "_id" : "Assistant Media Planner",
+    "value" : {
+        "iloscPracownikow" : 82.0
+    }
+}
+
+/* 25 */
+{
+    "_id" : "Assistant Professor",
+    "value" : {
+        "iloscPracownikow" : 77.0
+    }
+}
+
+/* 26 */
+{
+    "_id" : "Associate Professor",
+    "value" : {
+        "iloscPracownikow" : 65.0
+    }
+}
+
+/* 27 */
+{
+    "_id" : "Automation Specialist I",
+    "value" : {
+        "iloscPracownikow" : 28.0
+    }
+}
+
+/* 28 */
+{
+    "_id" : "Automation Specialist II",
+    "value" : {
+        "iloscPracownikow" : 17.0
+    }
+}
+
+/* 29 */
+{
+    "_id" : "Automation Specialist III",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 30 */
+{
+    "_id" : "Automation Specialist IV",
+    "value" : {
+        "iloscPracownikow" : 27.0
+    }
+}
+
+/* 31 */
+{
+    "_id" : "Biostatistician I",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 32 */
+{
+    "_id" : "Biostatistician II",
+    "value" : {
+        "iloscPracownikow" : 16.0
+    }
+}
+
+/* 33 */
+{
+    "_id" : "Biostatistician III",
+    "value" : {
+        "iloscPracownikow" : 26.0
+    }
+}
+
+/* 34 */
+{
+    "_id" : "Biostatistician IV",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 35 */
+{
+    "_id" : "Budget/Accounting Analyst I",
+    "value" : {
+        "iloscPracownikow" : 14.0
+    }
+}
+
+/* 36 */
+{
+    "_id" : "Budget/Accounting Analyst II",
+    "value" : {
+        "iloscPracownikow" : 35.0
+    }
+}
+
+/* 37 */
+{
+    "_id" : "Budget/Accounting Analyst III",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 38 */
+{
+    "_id" : "Budget/Accounting Analyst IV",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 39 */
+{
+    "_id" : "Business Systems Development Analyst",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 40 */
+{
+    "_id" : "Chemical Engineer",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 41 */
+{
+    "_id" : "Chief Design Engineer",
+    "value" : {
+        "iloscPracownikow" : 94.0
+    }
+}
+
+/* 42 */
+{
+    "_id" : "Civil Engineer",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 43 */
+{
+    "_id" : "Clinical Specialist",
+    "value" : {
+        "iloscPracownikow" : 74.0
+    }
+}
+
+/* 44 */
+{
+    "_id" : "Community Outreach Specialist",
+    "value" : {
+        "iloscPracownikow" : 90.0
+    }
+}
+
+/* 45 */
+{
+    "_id" : "Compensation Analyst",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 46 */
+{
+    "_id" : "Computer Systems Analyst I",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 47 */
+{
+    "_id" : "Computer Systems Analyst II",
+    "value" : {
+        "iloscPracownikow" : 32.0
+    }
+}
+
+/* 48 */
+{
+    "_id" : "Computer Systems Analyst III",
+    "value" : {
+        "iloscPracownikow" : 14.0
+    }
+}
+
+/* 49 */
+{
+    "_id" : "Computer Systems Analyst IV",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 50 */
+{
+    "_id" : "Cost Accountant",
+    "value" : {
+        "iloscPracownikow" : 78.0
+    }
+}
+
+/* 51 */
+{
+    "_id" : "Data Coordiator",
+    "value" : {
+        "iloscPracownikow" : 94.0
+    }
+}
+
+/* 52 */
+{
+    "_id" : "Database Administrator I",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 53 */
+{
+    "_id" : "Database Administrator II",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 54 */
+{
+    "_id" : "Database Administrator III",
+    "value" : {
+        "iloscPracownikow" : 15.0
+    }
+}
+
+/* 55 */
+{
+    "_id" : "Database Administrator IV",
+    "value" : {
+        "iloscPracownikow" : 29.0
+    }
+}
+
+/* 56 */
+{
+    "_id" : "Dental Hygienist",
+    "value" : {
+        "iloscPracownikow" : 100.0
+    }
+}
+
+/* 57 */
+{
+    "_id" : "Design Engineer",
+    "value" : {
+        "iloscPracownikow" : 80.0
+    }
+}
+
+/* 58 */
+{
+    "_id" : "Desktop Support Technician",
+    "value" : {
+        "iloscPracownikow" : 103.0
+    }
+}
+
+/* 59 */
+{
+    "_id" : "Developer I",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 60 */
+{
+    "_id" : "Developer II",
+    "value" : {
+        "iloscPracownikow" : 23.0
+    }
+}
+
+/* 61 */
+{
+    "_id" : "Developer III",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 62 */
+{
+    "_id" : "Developer IV",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 63 */
+{
+    "_id" : "Director of Sales",
+    "value" : {
+        "iloscPracownikow" : 81.0
+    }
+}
+
+/* 64 */
+{
+    "_id" : "Editor",
+    "value" : {
+        "iloscPracownikow" : 86.0
+    }
+}
+
+/* 65 */
+{
+    "_id" : "Electrical Engineer",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 66 */
+{
+    "_id" : "Engineer I",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 67 */
+{
+    "_id" : "Engineer II",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 68 */
+{
+    "_id" : "Engineer III",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 69 */
+{
+    "_id" : "Engineer IV",
+    "value" : {
+        "iloscPracownikow" : 31.0
+    }
+}
+
+/* 70 */
+{
+    "_id" : "Environmental Specialist",
+    "value" : {
+        "iloscPracownikow" : 73.0
+    }
+}
+
+/* 71 */
+{
+    "_id" : "Environmental Tech",
+    "value" : {
+        "iloscPracownikow" : 89.0
+    }
+}
+
+/* 72 */
+{
+    "_id" : "Executive Secretary",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 73 */
+{
+    "_id" : "Financial Advisor",
+    "value" : {
+        "iloscPracownikow" : 75.0
+    }
+}
+
+/* 74 */
+{
+    "_id" : "Financial Analyst",
+    "value" : {
+        "iloscPracownikow" : 90.0
+    }
+}
+
+/* 75 */
+{
+    "_id" : "Food Chemist",
+    "value" : {
+        "iloscPracownikow" : 81.0
+    }
+}
+
+/* 76 */
+{
+    "_id" : "GIS Technical Architect",
+    "value" : {
+        "iloscPracownikow" : 100.0
+    }
+}
+
+/* 77 */
+{
+    "_id" : "General Manager",
+    "value" : {
+        "iloscPracownikow" : 79.0
+    }
+}
+
+/* 78 */
+{
+    "_id" : "Geological Engineer",
+    "value" : {
+        "iloscPracownikow" : 93.0
+    }
+}
+
+/* 79 */
+{
+    "_id" : "Geologist I",
+    "value" : {
+        "iloscPracownikow" : 26.0
+    }
+}
+
+/* 80 */
+{
+    "_id" : "Geologist II",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 81 */
+{
+    "_id" : "Geologist III",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 82 */
+{
+    "_id" : "Geologist IV",
+    "value" : {
+        "iloscPracownikow" : 23.0
+    }
+}
+
+/* 83 */
+{
+    "_id" : "Graphic Designer",
+    "value" : {
+        "iloscPracownikow" : 80.0
+    }
+}
+
+/* 84 */
+{
+    "_id" : "Health Coach I",
+    "value" : {
+        "iloscPracownikow" : 27.0
+    }
+}
+
+/* 85 */
+{
+    "_id" : "Health Coach II",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 86 */
+{
+    "_id" : "Health Coach III",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 87 */
+{
+    "_id" : "Health Coach IV",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 88 */
+{
+    "_id" : "Help Desk Operator",
+    "value" : {
+        "iloscPracownikow" : 94.0
+    }
+}
+
+/* 89 */
+{
+    "_id" : "Help Desk Technician",
+    "value" : {
+        "iloscPracownikow" : 92.0
+    }
+}
+
+/* 90 */
+{
+    "_id" : "Human Resources Assistant I",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 91 */
+{
+    "_id" : "Human Resources Assistant II",
+    "value" : {
+        "iloscPracownikow" : 30.0
+    }
+}
+
+/* 92 */
+{
+    "_id" : "Human Resources Assistant III",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 93 */
+{
+    "_id" : "Human Resources Assistant IV",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 94 */
+{
+    "_id" : "Human Resources Manager",
+    "value" : {
+        "iloscPracownikow" : 84.0
+    }
+}
+
+/* 95 */
+{
+    "_id" : "Information Systems Manager",
+    "value" : {
+        "iloscPracownikow" : 96.0
+    }
+}
+
+/* 96 */
+{
+    "_id" : "Internal Auditor",
+    "value" : {
+        "iloscPracownikow" : 84.0
+    }
+}
+
+/* 97 */
+{
+    "_id" : "Junior Executive",
+    "value" : {
+        "iloscPracownikow" : 88.0
+    }
+}
+
+/* 98 */
+{
+    "_id" : "Legal Assistant",
+    "value" : {
+        "iloscPracownikow" : 80.0
+    }
+}
+
+/* 99 */
+{
+    "_id" : "Librarian",
+    "value" : {
+        "iloscPracownikow" : 76.0
+    }
+}
+
+/* 100 */
+{
+    "_id" : "Marketing Assistant",
+    "value" : {
+        "iloscPracownikow" : 86.0
+    }
+}
+
+/* 101 */
+{
+    "_id" : "Marketing Manager",
+    "value" : {
+        "iloscPracownikow" : 89.0
+    }
+}
+
+/* 102 */
+{
+    "_id" : "Mechanical Systems Engineer",
+    "value" : {
+        "iloscPracownikow" : 80.0
+    }
+}
+
+/* 103 */
+{
+    "_id" : "Media Manager I",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 104 */
+{
+    "_id" : "Media Manager II",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 105 */
+{
+    "_id" : "Media Manager III",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 106 */
+{
+    "_id" : "Media Manager IV",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 107 */
+{
+    "_id" : "Nuclear Power Engineer",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 108 */
+{
+    "_id" : "Nurse",
+    "value" : {
+        "iloscPracownikow" : 100.0
+    }
+}
+
+/* 109 */
+{
+    "_id" : "Nurse Practicioner",
+    "value" : {
+        "iloscPracownikow" : 84.0
+    }
+}
+
+/* 110 */
+{
+    "_id" : "Occupational Therapist",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 111 */
+{
+    "_id" : "Office Assistant I",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 112 */
+{
+    "_id" : "Office Assistant II",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 113 */
+{
+    "_id" : "Office Assistant III",
+    "value" : {
+        "iloscPracownikow" : 9.0
+    }
+}
+
+/* 114 */
+{
+    "_id" : "Office Assistant IV",
+    "value" : {
+        "iloscPracownikow" : 16.0
+    }
+}
+
+/* 115 */
+{
+    "_id" : "Operator",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 116 */
+{
+    "_id" : "Paralegal",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 117 */
+{
+    "_id" : "Payment Adjustment Coordinator",
+    "value" : {
+        "iloscPracownikow" : 95.0
+    }
+}
+
+/* 118 */
+{
+    "_id" : "Pharmacist",
+    "value" : {
+        "iloscPracownikow" : 81.0
+    }
+}
+
+/* 119 */
+{
+    "_id" : "Physical Therapy Assistant",
+    "value" : {
+        "iloscPracownikow" : 92.0
+    }
+}
+
+/* 120 */
+{
+    "_id" : "Product Engineer",
+    "value" : {
+        "iloscPracownikow" : 94.0
+    }
+}
+
+/* 121 */
+{
+    "_id" : "Professor",
+    "value" : {
+        "iloscPracownikow" : 118.0
+    }
+}
+
+/* 122 */
+{
+    "_id" : "Programmer Analyst I",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 123 */
+{
+    "_id" : "Programmer Analyst II",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 124 */
+{
+    "_id" : "Programmer Analyst III",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 125 */
+{
+    "_id" : "Programmer Analyst IV",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 126 */
+{
+    "_id" : "Programmer I",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 127 */
+{
+    "_id" : "Programmer II",
+    "value" : {
+        "iloscPracownikow" : 15.0
+    }
+}
+
+/* 128 */
+{
+    "_id" : "Programmer III",
+    "value" : {
+        "iloscPracownikow" : 29.0
+    }
+}
+
+/* 129 */
+{
+    "_id" : "Programmer IV",
+    "value" : {
+        "iloscPracownikow" : 28.0
+    }
+}
+
+/* 130 */
+{
+    "_id" : "Project Manager",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 131 */
+{
+    "_id" : "Quality Control Specialist",
+    "value" : {
+        "iloscPracownikow" : 76.0
+    }
+}
+
+/* 132 */
+{
+    "_id" : "Quality Engineer",
+    "value" : {
+        "iloscPracownikow" : 84.0
+    }
+}
+
+/* 133 */
+{
+    "_id" : "Recruiter",
+    "value" : {
+        "iloscPracownikow" : 86.0
+    }
+}
+
+/* 134 */
+{
+    "_id" : "Recruiting Manager",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 135 */
+{
+    "_id" : "Registered Nurse",
+    "value" : {
+        "iloscPracownikow" : 74.0
+    }
+}
+
+/* 136 */
+{
+    "_id" : "Research Assistant I",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 137 */
+{
+    "_id" : "Research Assistant II",
+    "value" : {
+        "iloscPracownikow" : 17.0
+    }
+}
+
+/* 138 */
+{
+    "_id" : "Research Assistant III",
+    "value" : {
+        "iloscPracownikow" : 14.0
+    }
+}
+
+/* 139 */
+{
+    "_id" : "Research Assistant IV",
+    "value" : {
+        "iloscPracownikow" : 21.0
+    }
+}
+
+/* 140 */
+{
+    "_id" : "Research Associate",
+    "value" : {
+        "iloscPracownikow" : 90.0
+    }
+}
+
+/* 141 */
+{
+    "_id" : "Research Nurse",
+    "value" : {
+        "iloscPracownikow" : 90.0
+    }
+}
+
+/* 142 */
+{
+    "_id" : "Safety Technician I",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 143 */
+{
+    "_id" : "Safety Technician II",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 144 */
+{
+    "_id" : "Safety Technician III",
+    "value" : {
+        "iloscPracownikow" : 23.0
+    }
+}
+
+/* 145 */
+{
+    "_id" : "Safety Technician IV",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 146 */
+{
+    "_id" : "Sales Associate",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 147 */
+{
+    "_id" : "Sales Representative",
+    "value" : {
+        "iloscPracownikow" : 94.0
+    }
+}
+
+/* 148 */
+{
+    "_id" : "Senior Cost Accountant",
+    "value" : {
+        "iloscPracownikow" : 84.0
+    }
+}
+
+/* 149 */
+{
+    "_id" : "Senior Developer",
+    "value" : {
+        "iloscPracownikow" : 87.0
+    }
+}
+
+/* 150 */
+{
+    "_id" : "Senior Editor",
+    "value" : {
+        "iloscPracownikow" : 83.0
+    }
+}
+
+/* 151 */
+{
+    "_id" : "Senior Financial Analyst",
+    "value" : {
+        "iloscPracownikow" : 77.0
+    }
+}
+
+/* 152 */
+{
+    "_id" : "Senior Quality Engineer",
+    "value" : {
+        "iloscPracownikow" : 70.0
+    }
+}
+
+/* 153 */
+{
+    "_id" : "Senior Sales Associate",
+    "value" : {
+        "iloscPracownikow" : 84.0
+    }
+}
+
+/* 154 */
+{
+    "_id" : "Social Worker",
+    "value" : {
+        "iloscPracownikow" : 88.0
+    }
+}
+
+/* 155 */
+{
+    "_id" : "Software Consultant",
+    "value" : {
+        "iloscPracownikow" : 96.0
+    }
+}
+
+/* 156 */
+{
+    "_id" : "Software Engineer I",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 157 */
+{
+    "_id" : "Software Engineer II",
+    "value" : {
+        "iloscPracownikow" : 29.0
+    }
+}
+
+/* 158 */
+{
+    "_id" : "Software Engineer III",
+    "value" : {
+        "iloscPracownikow" : 27.0
+    }
+}
+
+/* 159 */
+{
+    "_id" : "Software Engineer IV",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 160 */
+{
+    "_id" : "Software Test Engineer I",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 161 */
+{
+    "_id" : "Software Test Engineer II",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 162 */
+{
+    "_id" : "Software Test Engineer III",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 163 */
+{
+    "_id" : "Software Test Engineer IV",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 164 */
+{
+    "_id" : "Speech Pathologist",
+    "value" : {
+        "iloscPracownikow" : 97.0
+    }
+}
+
+/* 165 */
+{
+    "_id" : "Sprzatacz",
+    "value" : {
+        "iloscPracownikow" : 1.0
+    }
+}
+
+/* 166 */
+{
+    "_id" : "Staff Accountant I",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 167 */
+{
+    "_id" : "Staff Accountant II",
+    "value" : {
+        "iloscPracownikow" : 32.0
+    }
+}
+
+/* 168 */
+{
+    "_id" : "Staff Accountant III",
+    "value" : {
+        "iloscPracownikow" : 23.0
+    }
+}
+
+/* 169 */
+{
+    "_id" : "Staff Accountant IV",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 170 */
+{
+    "_id" : "Staff Scientist",
+    "value" : {
+        "iloscPracownikow" : 90.0
+    }
+}
+
+/* 171 */
+{
+    "_id" : "Statistician I",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 172 */
+{
+    "_id" : "Statistician II",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 173 */
+{
+    "_id" : "Statistician III",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 174 */
+{
+    "_id" : "Statistician IV",
+    "value" : {
+        "iloscPracownikow" : 23.0
+    }
+}
+
+/* 175 */
+{
+    "_id" : "Structural Analysis Engineer",
+    "value" : {
+        "iloscPracownikow" : 81.0
+    }
+}
+
+/* 176 */
+{
+    "_id" : "Structural Engineer",
+    "value" : {
+        "iloscPracownikow" : 85.0
+    }
+}
+
+/* 177 */
+{
+    "_id" : "Systems Administrator I",
+    "value" : {
+        "iloscPracownikow" : 22.0
+    }
+}
+
+/* 178 */
+{
+    "_id" : "Systems Administrator II",
+    "value" : {
+        "iloscPracownikow" : 24.0
+    }
+}
+
+/* 179 */
+{
+    "_id" : "Systems Administrator III",
+    "value" : {
+        "iloscPracownikow" : 26.0
+    }
+}
+
+/* 180 */
+{
+    "_id" : "Systems Administrator IV",
+    "value" : {
+        "iloscPracownikow" : 25.0
+    }
+}
+
+/* 181 */
+{
+    "_id" : "Tax Accountant",
+    "value" : {
+        "iloscPracownikow" : 76.0
+    }
+}
+
+/* 182 */
+{
+    "_id" : "Teacher",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 183 */
+{
+    "_id" : "Technical Writer",
+    "value" : {
+        "iloscPracownikow" : 83.0
+    }
+}
+
+/* 184 */
+{
+    "_id" : "VP Accounting",
+    "value" : {
+        "iloscPracownikow" : 80.0
+    }
+}
+
+/* 185 */
+{
+    "_id" : "VP Marketing",
+    "value" : {
+        "iloscPracownikow" : 79.0
+    }
+}
+
+/* 186 */
+{
+    "_id" : "VP Product Management",
+    "value" : {
+        "iloscPracownikow" : 91.0
+    }
+}
+
+/* 187 */
+{
+    "_id" : "VP Quality Control",
+    "value" : {
+        "iloscPracownikow" : 83.0
+    }
+}
+
+/* 188 */
+{
+    "_id" : "VP Sales",
+    "value" : {
+        "iloscPracownikow" : 86.0
+    }
+}
+
+/* 189 */
+{
+    "_id" : "Web Designer I",
+    "value" : {
+        "iloscPracownikow" : 28.0
+    }
+}
+
+/* 190 */
+{
+    "_id" : "Web Designer II",
+    "value" : {
+        "iloscPracownikow" : 17.0
+    }
+}
+
+/* 191 */
+{
+    "_id" : "Web Designer III",
+    "value" : {
+        "iloscPracownikow" : 17.0
+    }
+}
+
+/* 192 */
+{
+    "_id" : "Web Designer IV",
+    "value" : {
+        "iloscPracownikow" : 14.0
+    }
+}
+
+/* 193 */
+{
+    "_id" : "Web Developer I",
+    "value" : {
+        "iloscPracownikow" : 20.0
+    }
+}
+
+/* 194 */
+{
+    "_id" : "Web Developer II",
+    "value" : {
+        "iloscPracownikow" : 19.0
+    }
+}
+
+/* 195 */
+{
+    "_id" : "Web Developer III",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}
+
+/* 196 */
+{
+    "_id" : "Web Developer IV",
+    "value" : {
+        "iloscPracownikow" : 18.0
+    }
+}

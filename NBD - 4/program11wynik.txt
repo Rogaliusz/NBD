@@ -1,0 +1,46 @@
+Witaj w programie rejestrujacym auta w komisie.
+
+Podaj marke auta: opel
+
+Podaj model auta: astra
+
+Podaj rok produkcji auta: 2009
+
+Podaj wersje nadwozia: kombi
+Dodanie rekordu do bazy.
+{"rokProdukcji": "2009", "model": "astra", "marka": "opel", "rodzajNadwozia": "kombi"}
+
+Jesli chcesz edytowac marke wpisz 1
+Jesli chcesz edytowac model wpisz 2
+Jesli chcesz edytowac rok produkcji wpisz 3
+Jesli chcesz edytowac rodzaj nadwozia wpisz 4
+Co chcesz zedytowac: 2
+Modyfikacja rekordu w bazie.
+""
+Usuwam rekord z bazy.
+None
+root@scw-b98bfb:~/program11# nano program.py
+root@scw-b98bfb:~/program11# python program.py
+Witaj w programie rejestrujacym auta w komisie.
+
+Podaj marke auta: opel
+
+Podaj model auta: astra
+
+Podaj rok produkcji auta: 2008
+
+Podaj wersje nadwozia: kombi
+Dodanie rekordu do bazy.
+{"rokProdukcji": "2008", "model": "astra", "marka": "opel", "rodzajNadwozia": "kombi"}
+
+Jesli chcesz edytowac marke wpisz 1
+Jesli chcesz edytowac model wpisz 2
+Jesli chcesz edytowac rok produkcji wpisz 3
+Jesli chcesz edytowac rodzaj nadwozia wpisz 4
+Co chcesz zedytowac: 2
+
+Wprowadz model: signum
+Modyfikacja rekordu w bazie.
+{"rokProdukcji": "2008", "model": "signum", "marka": "opel", "rodzajNadwozia": "kombi"}
+Usuwam rekord z bazy.
+None

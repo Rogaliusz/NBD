@@ -1,0 +1,14 @@
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67OXMaA0OpUQZTIlMeK4ProZ4rfFkA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:38:29 GMT
+ETag: "5f9nycg506XmPbX7q9vjpz"
+Date: Wed, 06 Apr 2019 20:38:29 GMT
+Content-Type: application/json
+Content-Length: 162
+
+{ "marka": "opel", "model": "kadett", "rokProdukcji": 1992, "rodzajNadwozia": ["kombi, sedan, hatchback"], kolor: ["zielony", "zolty", "niebieski", "granatowy"] }

@@ -1,0 +1,14 @@
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67KVTMwFBqlMGUyJTHyjDjUM8VviwA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:39:52 GMT
+ETag: "4Nj3ZRza7S49W0zycikGK0"
+Date: Wed, 06 Apr 2019 20:39:52 GMT
+Content-Type: application/json
+Content-Length: 93
+
+{ "marka": "mercedes", "model": "cKlasa", "rodzajNadwozia": ["kombi", "sedan", "hatchback"] }

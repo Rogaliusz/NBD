@@ -1,0 +1,29 @@
+/* 1 */
+{
+    "_id" : ObjectId("5ae3b55cd19df053d2be4054"),
+    "sex" : "Male",
+    "first_name" : "Patryk",
+    "last_name" : "Roguszewski",
+    "job" : "Sprzatacz",
+    "email" : "djtomi12@gmail.com",
+    "location" : {
+        "city" : "Warszawa",
+        "address" : {
+            "streetname" : "Jana Olbrachta",
+            "streetnumber" : "17B"
+        }
+    },
+    "description" : "To jestem ja",
+    "height" : 170.0,
+    "weight" : 70.0,
+    "birth_date" : "1993-11-16T01:23:00Z",
+    "nationality" : "Polska",
+    "credit" : [ 
+        {
+            "type" : "pko",
+            "number" : "6608110343",
+            "currency" : "PLN",
+            "balance" : 400.0
+        }
+    ]
+}

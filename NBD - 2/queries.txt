@@ -1,0 +1,373 @@
+konsola, wpisujemy mongod.
+
+DBQuery.shellBatchSize = 5000;
+
+Aby wykonac zadania od 11 do 15 zmieniam pola weight, height, credit.balance na liczby zmiennoprzecinkowe.
+db.people.find({}).forEach(record => {
+    db.people.update(
+        {"_id": record._id},
+        {
+            $set: {
+                weight: parseFloat(record.weight),
+                height: parseFloat(record.height),
+                credit: record.credit.map(function(credit) {
+                    return {
+                        type: credit.type,
+                        number: credit.number,
+                        currency: credit.currency,
+                        balance: parseFloat(credit.balance)
+                    };
+                })
+            }
+        }
+    );
+});
+
+1. 
+db.people.findOne();
+
+2. 
+db.people.findOne({nationality: "China", sex: "Female"});
+
+3. 
+db.people.find({sex: "Male", nationality: "Germany"});
+
+4. 
+db.people.find({weight: {$gt: 68, $lt: 71.5} });
+
+5. 
+db.people.find({
+  birth_date: {
+    $gt: '2001-01-01T00:00:00Z',
+  },
+}, {
+  first_name: 1,
+  last_name: 1,
+  'location.city': 1,
+});
+
+
+6. 
+db.people.insert({
+    "sex" : "Male",
+    "first_name" : "Patryk",
+    "last_name" : "Roguszewski",
+    "job" : "Sprzatacz",
+    "email" : "djtomi12@gmail.com",
+    "location" : {
+        "city" : "Warszawa",
+        "address" : {
+            "streetname" : "Jana Olbrachta",
+            "streetnumber" : "17B"
+        }
+    },
+    "description" : "To jestem ja",
+    "height" : 170.00,
+    "weight" : 70.00,
+    "birth_date" : "1993-11-16T01:23:00Z",
+    "nationality" : "Polska",
+    "credit" : [
+        {
+            "type" : "pko",
+            "number" : "6608110343",
+            "currency" : "PLN",
+            "balance" : "400.00"
+        }
+    ]
+});
+
+7. 
+db.people.remove({"height": {$gt: "190"}});
+
+8. 
+var citiesUnderPolishShoe = db.people.find({"location.city": "Moscow"});
+var actualCity;
+
+citiesUnderPolishShoe.forEach(record => {
+    actualCity = record.location.address;
+    db.people.update(
+        {"_id": record._id},
+        {
+            $set: { 
+                location : { 
+                    city: "Moskwa",
+                    address: actualCity
+                }    
+            }
+        }
+    );
+});
+
+db.people.find({ 'location.city': 'Moskwa' });
+
+9. 
+db.people.update(
+    {"first_name": "Antonio"},
+    { $set: { hobby: "ping-pong" }},
+    {multi: true}
+);
+
+10. 
+db.people.update(
+    {"job": "Editor"},
+    {$unset: { email: 1 }},
+    {multi: true}
+);
+
+11-agregate. 
+db.people.aggregate([
+    { 
+        $group: { 
+            _id: "$sex",
+            avgHeight: {$avg : "$height"},
+            avgWeight: {$avg : "$weight"},
+            count: { $sum: 1 }
+        }
+    }
+]);
+
+12-agregate. 
+db.people.aggregate([
+    { $unwind: "$credit" },
+    {
+        $group: { 
+            _id: "$credit.currency",
+            sum: { $sum : "$credit.balance" },
+            count: { $sum: 1 }
+        }
+    }
+]);
+
+13-agregate. 
+db.people.aggregate([
+    {
+        $group: { 
+            _id: "$job",
+            count: { $sum: 1 }
+        }
+    }
+]);
+
+14-agregate. 
+db.people.aggregate([
+    { 
+        $project : {
+            nationality: 1,
+            weight: 1,
+            height: 1,
+        }
+    },
+    {
+        $group: { 
+            _id: "$nationality",
+            max: { $max:
+                { $divide: [
+                    "$weight", 
+                    { $pow: [ 
+                        { $divide: ["$height", 100] }, 2
+                    ]}
+                ]}
+            },
+            min: { $min:
+                { $divide: [
+                    "$weight", 
+                    { $pow: [ 
+                        { $divide: ["$height", 100] }, 2
+                    ]}
+                ]}
+            },
+            avg: { $avg:
+                { $divide: [
+                    "$weight", 
+                    { $pow: [ 
+                        { $divide: ["$height", 100] }, 2
+                    ]}
+                ]}
+            },
+            count: { $sum: 1 }
+        }
+    }
+]);
+
+15-agregate. 
+db.people.aggregate([
+    { $match: { "sex": "Female", "nationality": "Poland" } },
+    { $unwind: "$credit" },
+    {
+        $group: { 
+            _id: "$credit.currency",
+            avgBalance: { $avg: "$credit.balance" },
+            sumBalance: { $sum: "$credit.balance" },
+            count: { $sum: 1 }
+        }
+    }
+]);
+
+11-mapReduce.
+var fMapowanie = function () {
+  emit(this.sex, {
+    count: 1,
+    height: parseFloat(this.height),
+    weight: parseFloat(this.weight),
+  });
+};
+
+var fRedukowanie = function (key, values) {
+  var wartoscZredukowana = {
+    count: 0,
+    height: 0,
+    weight: 0,
+  };
+
+  values.forEach(function (value) {
+    wartoscZredukowana.count += value.count;
+    wartoscZredukowana.height += value.height;
+    wartoscZredukowana.weight += value.weight;
+  });
+
+  return wartoscZredukowana;
+};
+
+var finalizer = function (key, wartoscZredukowana) {
+  wartoscZredukowana.height = wartoscZredukowana.height / wartoscZredukowana.count;
+  wartoscZredukowana.weight = wartoscZredukowana.weight / wartoscZredukowana.count;
+
+  return wartoscZredukowana;
+};
+
+db.people.mapReduce(fMapowanie, fRedukowanie, {
+  out: 'sredniaWagaOrazWzrostZPodzialemNaPlcie',
+  finalize: finalizer,
+});
+
+12-mapReduce.
+var ilosc;
+var waluta;
+
+db.people.mapReduce(
+  function () {
+    if (!this.credit) return;
+
+    this.credit.forEach(function (credit) {
+      ilosc = parseFloat(credit.balance) || 0;
+      waluta = credit.currency;
+
+      emit(waluta, ilosc);
+    });
+  },
+  function (key, wartosci) {
+    return Array.sum(wartosci)
+  }, {
+    out: "srodkiNaKartachOrazWaluta"
+  }
+);
+
+13-mapReduce.
+db.people.mapReduce(
+  function () {
+    emit(this.job, {
+      iloscPracownikow: 1
+    });
+  },
+  function (key, wartosci) {
+    var wartoscZredukowana = {
+      iloscPracownikow: 0
+    };
+
+    wartosci.forEach(function (wartosc) {
+      wartoscZredukowana.iloscPracownikow += wartosc.iloscPracownikow;
+    });
+
+    return wartoscZredukowana;
+  }, {
+    out: "listaUnikalnychPrac"
+  }
+);
+
+14-mapReduce.
+var fMapowanie = function () {
+  var obliczBMI = function (weight, height) {
+    return (weight / Math.pow(height / 100, 2));
+  }
+
+  var waga = parseFloat(this.weight);
+  var wysokosc = parseFloat(this.height);
+
+  emit(this.nationality, {
+    count: 1,
+    sum: obliczBMI(waga, wysokosc),
+    min: obliczBMI(waga, wysokosc),
+    max: obliczBMI(waga, wysokosc),
+  });
+};
+
+var fRedukuj = function (key, values) {
+  var wartoscZredukowana = {
+    count: 0,
+    sum: 0,
+    min: values[0].min,
+    max: values[0].max,
+  }
+
+  values.forEach(function (value) {
+    wartoscZredukowana.count += value.count;
+    wartoscZredukowana.sum += value.sum;
+    wartoscZredukowana.min = Math.min(wartoscZredukowana.min, value.min);
+    wartoscZredukowana.max = Math.max(wartoscZredukowana.max, value.max);
+  });
+
+  return wartoscZredukowana;
+}
+
+var fFinal = function (key, wartoscZredukowana) {
+  wartoscZredukowana.avg = wartoscZredukowana.sum / wartoscZredukowana.count;
+  delete wartoscZredukowana.sum;
+  return wartoscZredukowana;
+}
+
+db.people.mapReduce(fMapowanie, fRedukuj, {
+  out: 'minMaxBmiWPodzialeNaNarodowosci',
+  finalize: fFinal,
+});
+
+15-mapReduce.
+var fMapowanie = function () {
+  if (!this.credit) return;
+
+  this.credit.forEach(function (credit) {
+    emit(credit.currency, {
+      count: 1,
+      balance: parseFloat(credit.balance) || 0,
+    });
+  });
+};
+
+var fRedukcja = function (key, values) {
+  var wartoscZredukowana = {
+    count: 0,
+    balance: 0,
+  }
+
+  values.forEach(function (value) {
+    wartoscZredukowana.count += value.count;
+    wartoscZredukowana.balance += value.balance;
+  });
+
+  return wartoscZredukowana;
+}
+
+var fFinal = function (key, wartoscZredukowana) {
+  wartoscZredukowana.avg = (wartoscZredukowana.balance / wartoscZredukowana.count).toFixed(2);
+  wartoscZredukowana.sum = wartoscZredukowana.balance;
+  delete wartoscZredukowana.balance;
+  return wartoscZredukowana;
+}
+
+db.people.mapReduce(fMapowanie, fRedukcja, {
+  query: {
+    "nationality": "Poland",
+    "sex": "Female"
+  },
+  out: "iloscSrodkowNaKontachKobietWPodzialeNaWaluty",
+  finalize: fFinal
+});

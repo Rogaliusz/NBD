@@ -1,0 +1,39 @@
+1. 
+riak-admin bucket-type create S13054 '{"props":{}}'
+
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "opel", "model": "astra", "rokProdukcji": 2003, "rodzajNadwozia": ["kombi", "sedan", "hatchback", "kabrio"] }' http://127.0.0.1:8098/buckets/S13054/keys/opelAstra2003?returnbody=true
+
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "lexus", "model": "is", "rokProdukcji": 2005, "rodzajNadwozia": ["kombi", "sedan", "kabrio"] }' http://127.0.0.1:8098/buckets/S13054/keys/lexusIs2005?returnbody=true
+
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "mercedes", "model": "cKlasa", "rokProdukcji": 2006, "rodzajNadwozia": ["kombi", "sedan", "hatchback"] }' http://127.0.0.1:8098/buckets/S13054/keys/mercedesCKlasa2006?returnbody=true
+
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "opel", "model": "kadett", "rokProdukcji": 1992, "rodzajNadwozia": ["kombi", "sedan", "hatchback"] }' http://127.0.0.1:8098/buckets/S13054/keys/opelKadett1992?returnbody=true
+
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "renault", "model": "megane", "rokProdukcji": 1998, "rodzajNadwozia": ["kombi", "sedan", "hatchback", "kabrio"] }' http://127.0.0.1:8098/buckets/S13054/keys/renaultMegane1998?returnbody=true
+
+2.
+curl -i -X GET http://127.0.0.1:8098/buckets/S13054/keys/lexusIs2005
+
+3.
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "opel", "model": "kadett", "rokProdukcji": 1992, "rodzajNadwozia": ["kombi, sedan, hatchback"], kolor: ["zielony", "zolty", "niebieski", "granatowy"] }' http://127.0.0.1:8098/buckets/S13054/keys/opelKadett1992?returnbody=true
+
+4.
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "mercedes", "model": "cKlasa", "rodzajNadwozia": ["kombi", "sedan", "hatchback"] }' http://127.0.0.1:8098/buckets/S13054/keys/mercedesCKlasa2006?returnbody=true
+
+5.
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "opel", "model": "astra", "rokProdukcji": 2006, "rodzajNadwozia": ["kombi", "sedan", "hatchback", "kabrio"] }' http://127.0.0.1:8098/buckets/S13054/keys/opelAstra2003?returnbody=true
+
+6.
+curl -v -X DELETE http://127.0.0.1:8098/buckets/S13054/keys/opelKadett1992?returnbody=true
+
+7.
+curl -i -X GET http://127.0.0.1:8098/buckets/S13054/keys/volvoV602011
+
+8.
+curl -i �X PUT -H "Content-Type: application/json" -d '{ "marka": "bmw", "model": "3", "rokProdukcji": 2003, "rodzajNadwozia": ["kombi", "sedan", "coupe"] }' http://127.0.0.1:8098/buckets/S13054/keys/?returnbody=true
+
+9.
+curl -i -X GET http://127.0.0.1:8098/buckets/S13054/keys/AdTFIPRBmso9j1hbUTdnCT5RTj8
+
+10.
+curl -v -X DELETE http://127.0.0.1:8098/buckets/S13054/keys/AdTFIPRBmso9j1hbUTdnCT5RTj8

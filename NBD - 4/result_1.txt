@@ -1,0 +1,76 @@
+S13054 created
+
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs47O2sOA0OpcQZTImMeK0PuwZ4rfFkA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:34:53 GMT
+ETag: "gGjQGb7Cg1LGgYcdHnN5E"
+Date: Wed, 06 Apr 2019 20:34:53 GMT
+Content-Type: application/json
+Content-Length: 120
+
+{ "marka": "opel", "model": "astra", "rokProdukcji": 2003, "rodzajNadwozia": ["kombi", "sedan", "hatchback", "kabrio"] }
+
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67sr6TgaHUOIMpkTGPlWHpwZ4rfFkA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:35:49 GMT
+ETag: "GaXkQFf9ycV1wn4wFelhS"
+Date: Wed, 06 Apr 2019 20:35:49 GMT
+Content-Type: application/json
+Content-Length: 105
+
+{ "marka": "lexus", "model": "is", "rokProdukcji": 2005, "rodzajNadwozia": ["kombi", "sedan", "kabrio"] }
+
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67KVTMwFBqlMGUyJjHynD8YM8VviwA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:36:23 GMT
+ETag: "30B1tD0l2aPyNDFTYgBVaD"
+Date: Wed, 06 Apr 2019 20:36:23 GMT
+Content-Type: application/json
+Content-Length: 115
+
+{ "marka": "mercedes", "model": "cKlasa", "rokProdukcji": 2006, "rodzajNadwozia": ["kombi", "sedan", "hatchback"] }
+
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67OXMaA0OpUQZTImMeK8Pjgz1X+LIA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:36:51 GMT
+ETag: "2Xxu5R6fvVbJ82Fio8BSm6"
+Date: Wed, 06 Apr 2019 20:36:51 GMT
+Content-Type: application/json
+Content-Length: 111
+
+{ "marka": "opel", "model": "kadett", "rokProdukcji": 1992, "rodzajNadwozia": ["kombi", "sedan", "hatchback"] }
+
+curl: (6) Could not resolve host: xn--x-5gn
+curl: (6) Could not resolve host: PUT
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fs67suw3A0OpUQZTImMeK8OPgz1X+LIA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/S13054>; rel="up"
+Last-Modified: Wed, 06 Apr 2019 20:37:12 GMT
+ETag: "4OaycwMsu24KngHMTwZczm"
+Date: Wed, 06 Apr 2019 20:37:12 GMT
+Content-Type: application/json
+Content-Length: 124
+
+{ "marka": "renault", "model": "megane", "rokProdukcji": 1998, "rodzajNadwozia": ["kombi", "sedan", "hatchback", "kabrio"] }
